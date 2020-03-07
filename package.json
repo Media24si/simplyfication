@@ -1,6 +1,6 @@
 {
   "name": "simplyfication",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple notification component for Vue.js",
   "jsnext": "dist/bundle.js",
   "main": "dist/simplyfication.common.js",
@@ -28,9 +28,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Media24si/m24-vue-biolerplate.git"
+    "url": "git+https://github.com/Media24si/simplyfication.git"
   },
-  "homepage": "https://github.com/Media24si/m24-vue-biolerplate",
+  "homepage": "https://github.com/Media24si/simplyfication",
   "keywords": [
     "vue",
     "component",
