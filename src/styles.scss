@@ -1,0 +1,53 @@
+@tailwind base;
+
+@tailwind components;
+
+/*! purgecss start ignore !*/
+
+.notification-enter-active,
+.notification-leave-active {
+  transition: all 500ms linear;
+}
+.notification-enter,
+.notification-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.notify-default {
+  .notification {
+    width: 300px;
+    h4 {
+      @apply text-lg;
+    }
+    p {
+      @apply text-sm;
+    }
+
+    &.error {
+      @apply bg-alert-red-light text-alert-red;
+
+      .divider {
+        @apply border-alert-red;
+      }
+    }
+    &.warning {
+      @apply bg-alert-yellow-light text-alert-yellow;
+
+      .divider {
+        @apply border-alert-yellow;
+      }
+    }
+    &.success {
+      @apply bg-alert-green-light text-alert-green;
+
+      .divider {
+        @apply border-alert-green;
+      }
+    }
+  }
+}
+
+/*! purgecss end ignore !*/
+
+@tailwind utilities;

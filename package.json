@@ -1,0 +1,69 @@
+{
+  "name": "simplyfication",
+  "version": "1.0.0",
+  "description": "A simple notification component for Vue.js",
+  "jsnext": "dist/bundle.js",
+  "main": "dist/simplyfication.common.js",
+  "module": "dist/simplyfication.esm.js",
+  "directories": {
+    "src": "src",
+    "dist": "dist"
+  },
+  "scripts": {
+    "purge": "rm -rf dist/",
+    "compile": "rollup -c",
+    "build": "npm run purge && npm run compile",
+    "lint": "eslint src/**/*",
+    "scss": "sass src/styles.scss build/build.css",
+    "tailwind": "tailwind build build/build.css -o build/styles.css",
+    "purgecss": "purgecss --css build/styles.css --content src/Simplyfication.vue --output dist",
+    "cleancss": "cleancss -o dist/styles.min.css dist/styles.css",
+    "cleanup": "rm -rf build/",
+    "styles": "npm run scss && npm run tailwind && npm run purgecss && npm run cleancss && npm run cleanup",
+    "beforePublish": "npm run lint && npm run build && npm run styles"
+  },
+  "files": [
+    "dist/*.css",
+    "dist/*.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Media24si/m24-vue-biolerplate.git"
+  },
+  "homepage": "https://github.com/Media24si/m24-vue-biolerplate",
+  "keywords": [
+    "vue",
+    "component",
+    "simple",
+    "notification",
+    "toast"
+  ],
+  "author": {
+    "name": "Adam Stradovnik",
+    "email": "adam.stradovnik@gmail.com",
+    "url": "https://github.com/Neoglyph/"
+  },
+  "contributors": [
+    {
+      "name": "pogachar"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.1",
+    "clean-css-cli": "^4.3.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.2.1",
+    "purgecss": "^2.1.0",
+    "rollup": "^1.31.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-vue": "^5.1.6",
+    "sass": "^1.26.2",
+    "standard": "^14.3.1",
+    "tailwindcss": "^1.2.0",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
