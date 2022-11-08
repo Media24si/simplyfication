@@ -60,7 +60,7 @@
     "purgecss": "^2.1.0",
     "rollup": "^1.31.1",
     "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-vue": "^5.1.6",
+    "rollup-plugin-vue": "^6.0.0",
     "sass": "^1.26.2",
     "standard": "^14.3.1",
     "tailwindcss": "^1.2.0",
